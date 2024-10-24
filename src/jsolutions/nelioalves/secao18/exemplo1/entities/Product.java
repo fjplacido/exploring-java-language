@@ -30,6 +30,10 @@ public class Product {
 		return p.price >= 900.00;
 	}
 
+	public boolean nonStaticProductPredicate() {
+		return price >= 900.00;
+	}
+
 	@Override
 	public String toString() {
 		return "Product [name=" + name + ", price=" + price + "]";
