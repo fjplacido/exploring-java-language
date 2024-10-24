@@ -2,7 +2,6 @@ package jsolutions.nelioalves.secao18.exemplo1.application;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.function.Consumer;
 
 import jsolutions.nelioalves.secao18.exemplo1.entities.Product;
 
@@ -16,8 +15,7 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 
-		Consumer<Product> consumer = p -> p.setPrice(p.getPrice() * 1.1);
-		list.forEach(consumer);
+		list.forEach(p -> p.setPrice(p.getPrice() * 1.1));
 
 		list.forEach(System.out::println);
 
