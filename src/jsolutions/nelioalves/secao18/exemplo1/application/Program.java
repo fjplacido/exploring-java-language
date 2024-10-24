@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jsolutions.nelioalves.secao18.exemplo1.entities.Product;
+import jsolutions.nelioalves.secao18.exemplo1.util.PriceUpdate;
 
 public class Program {
 
@@ -15,11 +16,10 @@ public class Program {
 		list.add(new Product("Notebook", 1200.00));
 		list.add(new Product("Tablet", 450.00));
 
-		list.removeIf(p -> p.getPrice() >= 900.00);
+		list.forEach(new PriceUpdate());
 
-		for (Product p : list) {
-			System.out.println(p);
-		}
+		list.forEach(System.out::println);
+
 	}
 
 }
